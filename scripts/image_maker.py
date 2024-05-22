@@ -3,6 +3,8 @@ from PIL import Image, ImageDraw, ImageFont
 import os
 from datetime import datetime
 
+image = Image.open('background.png')
+
 def loadfont(fontsize):
     ttf = 'assets/fonts/SUIT-Bold.ttf'
     return ImageFont.truetype(font=ttf, size=fontsize)
@@ -18,7 +20,7 @@ def school_meal(meals, date, weekday):
     date_font = loadfont(150)
     date_font_color = 'rgb(196, 196, 196)'
 
-    image = Image.open('assets/images/food_background.png')
+    image = Image.open('background.png')
     draw = ImageDraw.Draw(image)
 
     parsed_day = date.split('-')
