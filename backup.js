@@ -32,9 +32,9 @@ const postToInstagram = async () => {
         }
         const instagram = new IgApiClient();
 
-        instagram.state.generateDevice('isdj_bap'); // Instagram 계정명 직접 지정
+        instagram.state.generateDevice(process.env.INSTAGRAM_USERNAME); // Instagram 계정명 직접 지정
 
-        await instagram.account.login('isdj_bap', 'reboot2023!'); // Instagram 비밀번호 직접 지정
+        await instagram.account.login(process.env.INSTAGRAM_USERNAME, process.env.INSTAGRAM_PASSWORD); // .env 파일에서 인스타그램 계정 정보 사용
 
         const food = fs.readFileSync('build/meal.jpeg');
 
