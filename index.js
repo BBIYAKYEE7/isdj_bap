@@ -60,3 +60,4 @@ cron.schedule('1 0 * * 0-4,6', () => {
     console.log('⏰ Cron job 실행됨');
     postToInstagram();
 });
+// Code with passion of BBIYAKYEE7
